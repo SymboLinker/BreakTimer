@@ -1,16 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+	<LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
-	<UseWPF>true</UseWPF>
-	<DebugType>none</DebugType>
+    <UseWPF>true</UseWPF>
+	<IncludeNativeBinariesInSingleFile>true</IncludeNativeBinariesInSingleFile>
+	<IncludeAllContentInSingleFile>true</IncludeAllContentInSingleFile>
+	<IncludeSymbolsInSingleFile>true</IncludeSymbolsInSingleFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\PublishProfiles\" />
+    <None Remove="icon.png" />
+    <None Remove="Sounds\Annoying alarm.mp3" />
+    <None Remove="Sounds\Applause.mp3" />
+    <None Remove="Sounds\Chimes.wav" />
+    <None Remove="Sounds\Water droplet.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\Annoying alarm.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\Applause.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\Chimes.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\Water droplet.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="BreakTimer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BreakTimer"
+        mc:Ignorable="d"
+        Title="Break timer" Width="150" Height="130"
+        Icon="./icon.png"
+        ShowInTaskbar="False"
+        Topmost="True"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <Button Click="Button_Click">60</Button>
+        <Button Grid.Column="1" Click="Button_Click">45</Button>
+        <Button Grid.Column="2" Click="Button_Click">30</Button>
+        <Button Grid.Row="1" Click="Button_Click">15</Button>
+        <Button Grid.Column="1" Grid.Row="1" Click="Button_Click">10</Button>
+        <Button Grid.Column="2" Grid.Row="1" Click="Button_Click">5</Button>
+        <ComboBox Name="SoundBox" Grid.Row="3" Grid.ColumnSpan="3">
+            <ComboBoxItem IsSelected="True">No sound</ComboBoxItem>
+            <ComboBoxItem>Annoying alarm</ComboBoxItem>
+            <ComboBoxItem>Applause</ComboBoxItem>
+            <ComboBoxItem>Chimes</ComboBoxItem>
+            <ComboBoxItem>Water droplet</ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>
